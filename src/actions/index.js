@@ -1,3 +1,4 @@
 import counter from "./counter";
-const allActions = {counter} ;
+import gif from './gifs'
+const allActions = {counter , gif} ;
 export default allActions;

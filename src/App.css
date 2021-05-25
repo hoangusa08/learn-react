@@ -24,6 +24,21 @@
   color: white;
 }
 
+.home img {
+  margin: 20px;
+  width: 400px;
+}
+.home form {
+  text-align: center;
+  }
+.home input {
+  width: 30%;
+}
+.home .home-image {
+display: inline;
+}
+
+
 .App-link {
   color: #61dafb;
 }
