@@ -1,4 +1,4 @@
-var dataInit =  [
+var  initalState =  [
         {
         id: 1,
         url: "https://media0.giphy.com/media/LRsMaCckjrvJdQLn7w/giphy.gif?cid=4e4f4969pm8j3tcs91cmgmujseh757hwsle7p948idjenup0&rid=giphy.gif&ct=g"
@@ -33,7 +33,7 @@ var dataInit =  [
         },
     ]
 
-const gifs = (state = dataInit , action) => {
+const gifs = (state = initalState , action) => {
     switch (action.type) {
         case "ADDGIF" :
             let temp = { id : (state.length+1),

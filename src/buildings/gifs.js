@@ -1,6 +1,7 @@
 import {connect} from 'react-redux'
 import  Home from '../components/home'
-import  allAction from '../actions'
+import {addGif}from '../actions/gifs'
+
 const mapStateToProps = (state) =>{
     return {
         gifs : state.gifs
@@ -8,7 +9,7 @@ const mapStateToProps = (state) =>{
 }
 
 const mapDispatchToProps =  {
-    addGif : allAction.gif.addGif
+    addGif : addGif
 }
 
 

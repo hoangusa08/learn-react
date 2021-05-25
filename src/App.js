@@ -1,9 +1,9 @@
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import './App.css';
 import Headers from './components/header'
 import Home from './buildings/gifs'
 import Counter from './components/counter'
+
 function App() {
   return (
     <div >
