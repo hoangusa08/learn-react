@@ -37,8 +37,11 @@ const gifs = (state = initalState , action) => {
     switch (action.type) {
         case "ADDGIF" :
             let temp = { id : (state.length+1),
-                url : action.payload.url}
+                url : action.payload}
             return [...state, temp ];
+        case "REMOVEGIF" :
+            state.splice(action.payload, 1)
+            return [...state];
         default :
             return state
     }
