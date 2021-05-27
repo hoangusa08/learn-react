@@ -35,13 +35,23 @@ var  initalState =  [
 
 const gifs = (state = initalState , action) => {
     switch (action.type) {
-        case "ADDGIF" :
+        case "ADD_GIF" :
             let temp = { id : (state.length+1),
                 url : action.payload}
             return [...state, temp ];
-        case "REMOVEGIF" :
-            state.splice(action.payload, 1)
+        case "REMOVE_GIF" :
+            if(action.payload !== "")
+                state.splice(parseInt(action.payload,10), 1)
             return [...state];
+        case "SET_GIF" :
+            let tempSetGif = []
+            for ( const gif of action.payload) {
+                tempSetGif.push({
+                    id : gif.id,
+                    url : gif.images.original.url
+                })
+            }
+            return [...state, ...tempSetGif];
         default :
             return state
     }
