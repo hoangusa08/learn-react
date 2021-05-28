@@ -1,3 +1,5 @@
+import * as allAction from '../constant/constant'
+
 var  initalState =  [
         {
         id: 1,
@@ -35,15 +37,15 @@ var  initalState =  [
 
 const gifs = (state = initalState , action) => {
     switch (action.type) {
-        case "ADD_GIF" :
+        case allAction.ADD_GIF :
             let temp = { id : (state.length+1),
                 url : action.payload}
             return [...state, temp ];
-        case "REMOVE_GIF" :
+        case allAction.REMOVE_GIF :
             if(action.payload !== "")
                 state.splice(parseInt(action.payload,10), 1)
             return [...state];
-        case "SET_GIF" :
+        case allAction.SET_GIF :
             let tempSetGif = []
             for ( const gif of action.payload) {
                 tempSetGif.push({
@@ -52,7 +54,7 @@ const gifs = (state = initalState , action) => {
                 })
             }
             return [...state, ...tempSetGif];
-        case "SET_SEARCH_GIF" :
+        case allAction.SET_SEARCH_GIF :
             let tempSetSearchGif = []
             for ( const gif of action.payload) {
                 tempSetSearchGif.push({
