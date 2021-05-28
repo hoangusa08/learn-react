@@ -52,6 +52,15 @@ const gifs = (state = initalState , action) => {
                 })
             }
             return [...state, ...tempSetGif];
+        case "SET_SEARCH_GIF" :
+            let tempSetSearchGif = []
+            for ( const gif of action.payload) {
+                tempSetSearchGif.push({
+                    id : gif.id,
+                    url : gif.images.original.url
+                })
+            }
+            return [...tempSetSearchGif];
         default :
             return state
     }

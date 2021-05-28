@@ -12,7 +12,8 @@ const mapDispatchToProps =  {
     addGif : all.addGif,
     removeGif : all.removeGif,
     setGif : all.setGif , 
-    getGif : all.getGif
+    getGif : all.getGif,
+    searchGif : all.searchGif
 }
 
 
